@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Fitness - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Country Fitness</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Country Fitness</h1>
+      <p>Empower Your Body, Transform Your Life</p>
+      <button onclick="location.href='membership.html'">Join Us Today</button>
+    </section>
+
+    <section class="dynamic-time">
+      <h2>Current Date and Time</h2>
+      <p id="date-time"></p>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h3>Personal Training</h3>
+        <p>Customized plans to meet your fitness goals.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Group Classes</h3>
+        <p>Fun and energetic group workouts for all levels.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Nutrition Coaching</h3>
+        <p>Fuel your fitness journey with expert advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Country Fitness. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById('date-time').textContent = now.toLocaleString();
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+</body>
+</html>
